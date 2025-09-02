@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "react": "^19.1.1"
+  },
+  "name": "avatox",
+  "version": "1.0.0",
+  "description": "Avatar Util",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Renz Siguenza",
+  "license": "ISC"
+}
