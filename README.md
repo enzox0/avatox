@@ -21,7 +21,7 @@ npm install avatox
 ```js
 
 import React from "react";
-import { Avatar } from "avatox";
+import Avatar from "avatox";
 
 type Lead = {
   id: number;
