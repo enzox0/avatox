@@ -5,9 +5,10 @@ interface AvatarProps {
   name: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
+  onClick?: React.MouseEventHandler<HTMLDivElement | HTMLImageElement>;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ src, name, size = 'md', className = '' }) => {
+const Avatar: React.FC<AvatarProps> = ({ src, name, size = 'md', className = '', onClick }) => {
   const getInitials = (fullName: string) => {
     const names = fullName.trim().split(' ');
     if (names.length === 1) {
@@ -31,6 +32,7 @@ const Avatar: React.FC<AvatarProps> = ({ src, name, size = 'md', className = '' 
         className={baseClasses}
         src={src}
         alt={name}
+        onClick={onClick}
         onError={(e) => {
           e.currentTarget.style.display = 'none';
           const initialsDiv = e.currentTarget.nextElementSibling as HTMLElement;
@@ -43,7 +45,10 @@ const Avatar: React.FC<AvatarProps> = ({ src, name, size = 'md', className = '' 
   }
 
   return (
-    <div className={`${baseClasses} bg-gradient-to-br from-blue-500 to-blue-600 text-white font-semibold`}>
+    <div
+      className={`${baseClasses} bg-gradient-to-br from-blue-500 to-blue-600 text-white font-semibold`}
+      onClick={onClick}
+    >
       {getInitials(name)}
     </div>
   );
