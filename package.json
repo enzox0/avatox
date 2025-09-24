@@ -3,7 +3,7 @@
     "react": "^19.1.1"
   },
   "name": "avatox",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Avatar Util",
   "main": "index.js",
   "devDependencies": {},
