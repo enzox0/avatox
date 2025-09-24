@@ -70,7 +70,7 @@ MIT © 2025 Renz Siguenza
 
 ## 💬 Feedback
 
-Feel free to open issues or submit pull requests to suggest improvements or report bugs!
+Feel free to open issues or submit pull requests to suggest improvements or report bugs!!
 
 
 
