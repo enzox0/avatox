@@ -1,0 +1,111 @@
+name: Documentation Improvement
+description: Suggest improvements or report issues with documentation
+title: "[Docs]: "
+labels: ["documentation", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation! Clear docs make Avatox better for everyone.
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation needs improvement?
+      options:
+        - README
+        - API Documentation
+        - Code Examples
+        - TypeScript Types
+        - Contributing Guide
+        - Code of Conduct
+        - Security Policy
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue Description
+      description: What's wrong or missing in the current documentation?
+      placeholder: The documentation for X is unclear because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where is this documentation located? (file path, section, URL)
+      placeholder: e.g., README.md - API Documentation section, line 150
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      description: How would you improve this documentation?
+      placeholder: I suggest adding... / This section should explain...
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example or Clarification
+      description: Provide an example of what the improved documentation might look like
+      placeholder: |
+        ```markdown
+        ## Improved Section
+        
+        Clear explanation with code example...
+        ```
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Impact
+      description: How does this documentation issue affect users?
+      options:
+        - Critical - Prevents users from using a feature
+        - High - Causes significant confusion
+        - Medium - Minor confusion or missing details
+        - Low - Typo or formatting issue
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that would help improve the documentation
+      placeholder: Screenshots, links to related docs, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Would you be willing to help improve this documentation?
+      options:
+        - label: I would be willing to submit a PR to improve this documentation
+          required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have checked the latest version of the documentation
+          required: true
+        - label: I have searched existing issues to ensure this hasn't been reported before
+          required: true
