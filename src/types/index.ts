@@ -7,6 +7,7 @@ export interface AvatarProps {
   src?: string;
   name: string;
   variant?: AvatarVariant;
+  imageExtension?: string;
   size?: AvatarSize;
   className?: string;
   bgColor?: string;

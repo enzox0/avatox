@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AvatarProps } from "../types";
+import { AvatarProps } from "../types/index";
 import { sizeClasses, DEFAULT_BG_COLOR } from "../constants";
 import { getInitials, getRandomImage } from "../utils";
 
@@ -7,6 +7,7 @@ export const Avatar: React.FC<AvatarProps> = ({
   src,
   name,
   variant = "initials",
+  imageExtension,
   size = "md",
   className = "",
   bgColor = DEFAULT_BG_COLOR,
@@ -14,7 +15,7 @@ export const Avatar: React.FC<AvatarProps> = ({
 }) => {
   const [imgError, setImgError] = useState(false);
 
-  const finalSrc = variant === "random" ? getRandomImage(name) : src;
+  const finalSrc = variant === "random" ? getRandomImage(name, imageExtension) : src;
   const baseClasses = `${sizeClasses[size]} rounded-full overflow-hidden flex items-center justify-center ${className}`;
 
   return (

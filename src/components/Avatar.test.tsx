@@ -1,6 +1,5 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import React from 'react';
 import { Avatar } from './Avatar';
 
 describe('Avatar Component', () => {
@@ -22,5 +21,12 @@ describe('Avatar Component', () => {
     const src = img.getAttribute('src');
     expect(src).toContain('r2.dev');
     expect(src).toMatch(/\/\d+\.png$/);
+  });
+
+  it('renders random image with custom extension', () => {
+    render(<Avatar name="John Doe" variant="random" imageExtension="jpg" />);
+    const img = screen.getByRole('img');
+    const src = img.getAttribute('src');
+    expect(src).toMatch(/\/\d+\.jpg$/);
   });
 });

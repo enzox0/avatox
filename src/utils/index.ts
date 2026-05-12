@@ -8,8 +8,8 @@ export const getInitials = (fullName: string): string => {
     : (names[0][0] + names[names.length - 1][0]).toUpperCase();
 };
 
-export const getRandomImage = (fullName: string): string => {
+export const getRandomImage = (fullName: string, extension: string = IMAGE_EXTENSION): string => {
   const hash = fullName.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
   const id = (hash % IMAGE_COUNT) + 1;
-  return `${AVATOX_R2_URL}/${id}.${IMAGE_EXTENSION}`;
+  return `${AVATOX_R2_URL}/${id}.${extension}`;
 };
