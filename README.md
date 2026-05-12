@@ -320,7 +320,7 @@ MIT © 2025 Renz Siguenza
 
 ## Support
 
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **Email**: [renzsiguenza0000@gmail.com](mailto:your-email@example.com)
 - **Issues**: [GitHub Issues](https://github.com/yourusername/avatox/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/avatox/discussions)
 
